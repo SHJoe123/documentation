@@ -117,12 +117,12 @@ The image below shows two identical models created with standard materials. The 
 
 _To make a material emissive in Blender, simply add an `emission` shader to the material._
 
-## **Emissive Strenght**
+## **Emissive Strength**
 Strength of the emitted light. A value of 1.0 will ensure that the object in the image has the exact same color as the Emission Color, i.e. make it ‘shadeless’.
 
 <img src="/images/3d-models-and-animations/3d-essentials/52-emissive-materials.png" width="600" />
 
-_You can check in the [testing world](https://play.decentraland.org/?realm=TestEnvironment.dcl.eth) how the emission strenght behavies in world_
+_You can check in the [testing world](https://play.decentraland.org/?realm=TestEnvironment.dcl.eth) how the emission strenght behaves in world_
 
 ## **Normal**
 
@@ -140,7 +140,7 @@ Take into account that material limits per parcel are:
 
 > log2(n+1) x 20 Amount of materials in the scene. It includes materials imported as part of models.
 
-It's important to take into account that each material represent one draw call per objetc so it's crucial to keep the materials as minimun as possible and try to reutilize materials as much as possible doing techniques like Texture Atlases, this also is going to benefit the scene having a cohesive style between the assets of your scene. 
+It's important to take into account that each material represent one draw call per object so it's crucial to keep the materials as minimun as possible and try to reutilize materials as much as possible doing techniques like Texture Atlases, this also is going to benefit the scene having a cohesive style between the assets of your scene. 
 
 # **Material Naming**
 
@@ -166,7 +166,7 @@ Embedded textures get duplicated for each model and add to the scene’s size. 
 > Note: After referencing a file for a texture that won’t be embedded, make sure that file won’t be moved or renamed, as otherwise the reference to the file will be lost. The file must also be inside the scene folder so that it’s uploaded together with the scene.
 
 - When setting transparency of a material, try to always use *Alpha clip* rather than *Alpha blend*, unless you specifically need to have a material that’s partially transparent (like glass). This will avoid problems where the engine renders the wrong model in front of the other.
-- As a rule of thumbs remember to always set *backface culling* in your materials. This will make your scene more perfermant giving that the engine is going to render only the visible face of your models. Only untoggle *backface culling* in case you need a model to be renderer in both sides (for example, a group of leafs of a tree made by 3D planes).
+- As a rule of thumbs remember to always set *backface culling* in your materials. This will make your scene more perfermant giving that the engine is going to render only the visible face of your models. Only untoggle *backface culling* in case you need a model to be renderer in both sides (for example, a group of leaves of a tree made by 3D planes).
 
 <img src="/images/3d-models-and-animations/3d-essentials/59-backface-culling.png" width="400" />
 
